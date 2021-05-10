@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "8ea5cdd1-f372-4e05-b150-0615a4b0183f",
+		"name": "LP_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50040/api/members/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"members",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Members by Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Balance\": 20,\r\n    \"Operator\": \"=\",\r\n    \"IsActive\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/members/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"members",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Members",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"Name\": \"Anakin Skywalker\",\r\n        \"Address\": \"Landsberger Straße 110\",\r\n        \"Accounts\": [\r\n            {\r\n                \"Name\": \"Burger King\",\r\n                \"Balance\": 10,\r\n                \"Active\": true\r\n            },\r\n            {\r\n                \"Balance\": 150,\r\n                \"Active\": false,\r\n                \"Name\": \"Fitness First\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"Name\": \"Darth Vader\",\r\n        \"Address\": \"Landsberger Straße 112\",\r\n        \"Accounts\": [\r\n            {\r\n                \"Balance\": 10,\r\n                \"Active\": true,\r\n                \"Name\": \"Lufthansa\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"Name\": \"Obi-Wan Kenobi\",\r\n        \"Address\": \"Landsberger Straße 114\",\r\n        \"Accounts\": [\r\n            {\r\n                \"Balance\": 0,\r\n                \"Active\": true,\r\n                \"Name\": \"Lufthansa\"\r\n            },\r\n            {\r\n                \"Balance\": 17,\r\n                \"Active\": true,\r\n                \"Name\": \"Fitness First\"\r\n            },\r\n            {\r\n                \"Name\": \"Burger King\",\r\n                \"Balance\": 20,\r\n                \"Active\": true\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"Name\": \"Yoda\",\r\n        \"Address\": \"Landsberger Straße 114\",\r\n        \"Accounts\": [\r\n            {\r\n                \"Balance\": 10,\r\n                \"Active\": true,\r\n                \"Name\": \"Lufthansa\"\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/importmembers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"importmembers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"The Great Khali\",\r\n    \"Address\": \"Sesamtstr. 42\",\r\n    \"Accounts\": [\r\n        {\r\n            \"Name\": \"Douglas Drogerie\",\r\n            \"Balance\": 1000,\r\n            \"Active\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/addmember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"addmember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Loyalty Account ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MemberName\": \"Anakin Skywalker\",\r\n    \"Account\": {\r\n        \"Balance\": 10,\r\n        \"Active\": false,\r\n        \"Name\": \"McFit\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/AddAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"AddAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Points to Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MemberName\": \"Anakin Skywalker\",\r\n    \"AccountName\": \"McFit\",\r\n    \"PointsToAdd\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/AddPointsToAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"AddPointsToAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redeem Points",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MemberName\": \"Anakin Skywalker\",\r\n    \"AccountName\": \"McFit\",\r\n    \"PointsToRedeem\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50040/api/RedeemPoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50040",
+					"path": [
+						"api",
+						"RedeemPoints"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,65 @@
+[
+	{
+		"Name": "Anakin Skywalker",
+		"Address": "Landsberger Straße 110",
+		"Accounts": 
+		[
+			{
+				"Name": "Burger King",
+				"Balance": 10,
+				"Active": true
+			},
+			{
+				"Balance": 150,
+				"Active": false,
+				"Name": "Fitness First"
+			}
+		]
+	},
+	{
+		"Name": "Darth Vader",
+		"Address": "Landsberger Straße 112",
+		"Accounts": 
+		[
+			{
+				"Balance": 10,
+				"Active": true,
+				"Name": "Lufthansa"
+			}
+		]
+	},
+	{
+		"Name": "Obi-Wan Kenobi",
+		"Address": "Landsberger Straße 114",
+		"Accounts": 
+		[
+			{
+				"Balance": 0,
+				"Active": true,
+				"Name": "Lufthansa"
+			},
+			{
+				"Balance": 17,
+				"Active": true,
+				"Name": "Fitness First"
+			},
+			{
+				"Name": "Burger King",
+				"Balance": 20,
+				"Active": true
+			}
+		]
+	},
+	{
+		"Name": "Yoda",
+		"Address": "Landsberger Straße 114",
+		"Accounts": 
+		[
+			{
+				"Balance": 10,
+				"Active": true,
+				"Name": "Lufthansa"
+			}
+		]
+	}
+]
